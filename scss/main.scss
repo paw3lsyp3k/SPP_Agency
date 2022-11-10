@@ -170,7 +170,7 @@ $white: #fefefe;
       color: $main-color;
     }
     .wrapper-2-content-description {
-      font-weight: 200;
+      font-weight: 300;
       margin-top: 1vmax;
       font-size: 1.1vmax;
     }
@@ -198,13 +198,13 @@ $white: #fefefe;
     .wrapper-3-title {
       font-size: 2.4vmax;
       color: $white;
-      font-weight: 400;
+      font-weight: 500;
     }
     .wrapper-3-description {
       width: 90%;
       font-size: 1.1vmax;
       color: $white;
-      font-weight: 200;
+      font-weight: 300;
       margin-top: 1.5vmax;
     }
     .wrapper-3-button {
@@ -226,16 +226,13 @@ $white: #fefefe;
   .wrapper-3-img {
     width: 40vmax;
     height: 30vmax;
-    //position: absolute;
-    //right: 0;
-    //top: 15%;
     @include center-img;
     background-image: url(../assets/img/wrapper-3-img.jpg);
   }
 }
 .wrapper-4 {
   width: 100%;
-  padding: 6vmax;
+  padding: 4vmax 4vmax 6vmax 4vmax;
   background-image: url(../assets/img/wrapper-4-bg.png);
   @include center-img;
   display: flex;
@@ -311,7 +308,7 @@ $white: #fefefe;
     }
     .wrapper-4-description {
       font-size: 1.1vmax;
-      font-weight: 200;
+      font-weight: 300;
       margin-top: 1.5vmax;
       width: 85%;
     }
@@ -335,7 +332,7 @@ $white: #fefefe;
 
 .wrapper-5 {
   width: 100%;
-  padding: 5vmax;
+  padding: 6vmax 4vmax 4vmax 4vmax;
   background-color: $white;
   display: flex;
   justify-content: center;
@@ -360,7 +357,7 @@ $white: #fefefe;
     }
     .wrapper-5-description {
       font-size: 1.1vmax;
-      font-weight: 200;
+      font-weight: 300;
       margin-top: 1.5vmax;
       width: 85%;
     }
@@ -419,7 +416,7 @@ $white: #fefefe;
         font-size: 0.9vmax;
       }
       .wrapper-5-item-description {
-        font-weight: 200;
+        font-weight: 300;
         margin-top: 1vmax;
         font-size: 0.8vmax;
         text-align: center;
@@ -497,7 +494,7 @@ $white: #fefefe;
         color: $black;
       }
       .wrapper-6-item-description {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 0.8vmax;
         margin-top: 0.5vmax;
         color: $black;
@@ -550,12 +547,12 @@ $white: #fefefe;
         background-color: $main-color;
         padding: 2vmax;
         .wrapper-7-content-title {
-          font-weight: 400;
+          font-weight: 500;
           font-size: 1vmax;
           color: $white;
         }
         .wrapper-7-content-description {
-          font-weight: 200;
+          font-weight: 300;
           font-size: 0.8vmax;
           color: $white;
           margin-top: 1vmax;
@@ -610,7 +607,7 @@ $white: #fefefe;
     align-items: flex-start;
     .wrapper-8-title {
       font-size: 2.4vmax;
-      font-weight: 300;
+      font-weight: 500;
       color: $black;
       position: relative;
       z-index: 1;
@@ -627,8 +624,8 @@ $white: #fefefe;
     }
     .wrapper-8-description {
       margin-top: 2vmax;
-      font-size: 0.8vmax;
-      font-weight: 200;
+      font-size: 0.9vmax;
+      font-weight: 300;
       width: 75%;
     }
   }
@@ -642,6 +639,7 @@ $white: #fefefe;
     border-radius: 30px;
     cursor: pointer;
     transition: 250ms ease-in-out;
+    font-weight: 300;
     &:hover {
       background-color: $black;
       color: $white;

@@ -37,7 +37,7 @@ $white: #fefefe;
     background-color: $white;
     top: 0;
     left: 0;
-    border-bottom: 2px solid $main-color;
+    border-bottom: 3px solid $main-color;
     .nav-logo {
       font-size: 2.8vmax;
       font-weight: 300;
@@ -105,7 +105,7 @@ $white: #fefefe;
     }
     .wrapper-1-description {
       font-size: 1.1vmax;
-      font-weight: 200;
+      font-weight: 300;
       color: $black;
       margin-top: 2vmax;
       width: 90%;
@@ -128,7 +128,7 @@ $white: #fefefe;
     padding: 1vmax;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
+    grid-template-columns: 1fr 3px 1fr 3px 1fr 3px 1fr;
     .wrapper-2-counter-item {
       display: flex;
       flex-direction: column;
@@ -136,19 +136,20 @@ $white: #fefefe;
       justify-content: center;
       .wrapper-2-counter-number {
         font-size: 1.4vmax;
-        font-weight: 400;
+        font-weight: 500;
         color: $white;
       }
       .wrapper-2-counter-text {
         font-size: 0.8vmax;
-        font-weight: 200;
+        font-weight: 300;
         color: $white;
       }
     }
     .wrapper-2-counter-spacer {
       width: 100%;
-      height: 100%;
-      background-color: $main-color;
+      height: 60%;
+      margin: auto;
+      background-color: $white;
     }
   }
   .wrapper-2-content {
@@ -172,7 +173,7 @@ $white: #fefefe;
     }
     .wrapper-2-description {
       font-size: 1.1vmax;
-      font-weight: 200;
+      font-weight: 300;
       color: $black;
       margin-top: 2vmax;
     }
@@ -252,13 +253,13 @@ $white: #fefefe;
       }
       .wrapper-3-box-title {
         font-size: 1.4vmax;
-        font-weight: 400;
+        font-weight: 500;
         margin-top: 1vmax;
         color: $white;
       }
       .wrapper-3-box-description {
         font-size: 0.8vmax;
-        font-weight: 200;
+        font-weight: 300;
         margin-top: 1vmax;
         color: $white;
         text-align: center;
@@ -286,7 +287,7 @@ $white: #fefefe;
     }
     .wrapper-3-content-description {
       font-size: 1.1vmax;
-      font-weight: 200;
+      font-weight: 300;
       color: $black;
       margin-top: 2vmax;
     }
