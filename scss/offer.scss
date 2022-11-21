@@ -1,0 +1,134 @@
+$main-color: #189b50;
+$black: #000;
+$white: #fefefe;
+
+@mixin center-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  a {
+    text-decoration: none;
+  }
+}
+
+.wrapper-1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/img/wrapper-1-offer-bg.png);
+  @include center-img;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  header {
+    width: 100%;
+    padding: 1vmax 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    border-bottom: 3px solid $main-color;
+    z-index: 9999;
+    .nav-logo {
+      font-size: 2.8vmax;
+      font-weight: 300;
+      color: $black;
+
+      span {
+        color: $main-color;
+      }
+    }
+    .nav {
+      width: 32%;
+      height: 3vmax;
+      display: flex;
+      align-items: center;
+      .nav-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        .nav-item {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 1.2vmax;
+          color: $black;
+          cursor: pointer;
+          position: relative;
+          span {
+            color: $main-color;
+          }
+          &::before {
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: $main-color;
+            position: absolute;
+            bottom: 0;
+            transition: 250ms ease-in-out;
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: 250ms ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wrapper-1-content {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    background-color: $white;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .wrapper-1-title {
+      font-size: 3vmax;
+      color: $black;
+      font-weight: 500;
+      span {
+        color: $main-color;
+      }
+    }
+    .wrapper-1-description {
+      font-size: 1.1vmax;
+      font-weight: 300;
+      color: $black;
+      margin-top: 2vmax;
+      width: 90%;
+    }
+    .wrapper-1-content-arrow {
+      width: 4vmax;
+      height: 4vmax;
+      position: absolute;
+      bottom: 4vmax;
+      left: 50%;
+      margin-left: -3vmax;
+      background-image: url(../assets/icons/wrapper-1-offer-icon.png);
+      @include center-img;
+      cursor: pointer;
+      transition: 300ms ease-in-out;
+      &:hover {
+        transition: 300ms ease-in-out;
+        bottom: 3.75vmax;
+      }
+    }
+  }
+}
