@@ -125,6 +125,8 @@ $white: #fefefe;
       @include center-img;
       cursor: pointer;
       transition: 300ms ease-in-out;
+      border: none;
+      background-color: unset;
       &:hover {
         transition: 300ms ease-in-out;
         bottom: 3.75vmax;
