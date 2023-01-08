@@ -1,6 +1,6 @@
-$main-color: #189b50;
+$main-color: #178748;
 $black: #000;
-$white: #fefefe;
+$white: #fff;
 
 @mixin center-img {
   background-position: center;
@@ -99,6 +99,9 @@ $white: #fefefe;
       font-size: 3vmax;
       color: $black;
       font-weight: 500;
+      @media screen and (min-width: 1000px) {
+        font-size: 3.2vmax;
+      }
       span {
         color: $main-color;
       }
@@ -109,6 +112,9 @@ $white: #fefefe;
       color: $black;
       margin-top: 2vmax;
       width: 90%;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
     }
   }
 }
@@ -121,7 +127,7 @@ $white: #fefefe;
   padding: 10vmax 5%;
   position: relative;
   .wrapper-2-counter {
-    width: 50%;
+    width: 60%;
     background-color: $main-color;
     position: absolute;
     top: -3vmax;
@@ -138,11 +144,17 @@ $white: #fefefe;
         font-size: 1.4vmax;
         font-weight: 500;
         color: $white;
+        @media screen and (min-width: 1000px) {
+          font-size: 1.5vmax;
+        }
       }
       .wrapper-2-counter-text {
         font-size: 0.8vmax;
         font-weight: 300;
         color: $white;
+        @media screen and (min-width: 1000px) {
+          font-size: 0.9vmax;
+        }
       }
     }
     .wrapper-2-counter-spacer {
@@ -160,6 +172,9 @@ $white: #fefefe;
       color: $black;
       z-index: 1;
       position: relative;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -175,7 +190,10 @@ $white: #fefefe;
       font-size: 1.1vmax;
       font-weight: 300;
       color: $black;
-      margin-top: 2vmax;
+      margin-top: 1.8vmax;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
     }
   }
   .wrapper-2-img {
@@ -249,7 +267,13 @@ $white: #fefefe;
       .wrapper-3-box-icon {
         width: 5vmax;
         height: 5vmax;
-        background-color: aquamarine;
+        @include center-img;
+      }
+      .icon1 {
+        background-image: url(../assets/icons/wrapper-3-about-icon-1.png);
+      }
+      .icon2 {
+        background-image: url(../assets/icons/wrapper-3-about-icon-2.png);
       }
       .wrapper-3-box-title {
         font-size: 1.4vmax;
@@ -257,6 +281,9 @@ $white: #fefefe;
         margin-top: 1vmax;
         color: $white;
         text-align: center;
+        @media screen and (min-width: 1000px) {
+          font-size: 1.5vmax;
+        }
       }
       .wrapper-3-box-description {
         font-size: 0.8vmax;
@@ -264,6 +291,9 @@ $white: #fefefe;
         margin-top: 1vmax;
         color: $white;
         text-align: center;
+        @media screen and (min-width: 1000px) {
+          font-size: 0.9vmax;
+        }
       }
     }
   }
@@ -275,7 +305,9 @@ $white: #fefefe;
       color: $black;
       z-index: 1;
       position: relative;
-
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -292,6 +324,9 @@ $white: #fefefe;
       font-weight: 300;
       color: $black;
       margin-top: 2vmax;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
     }
   }
 }
@@ -316,11 +351,17 @@ $white: #fefefe;
       .wrapper-4-item-text {
         font-weight: 300;
         font-size: 0.9vmax;
+        @media screen and (min-width: 1000px) {
+          font-size: 1vmax;
+        }
       }
       .wrapper-4-item-author {
         font-weight: 500;
         font-size: 1.2vmax;
         color: $main-color;
+        @media screen and (min-width: 1000px) {
+          font-size: 1.3vmax;
+        }
       }
     }
   }
@@ -345,6 +386,9 @@ $white: #fefefe;
       color: $black;
       position: relative;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.4vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -361,6 +405,9 @@ $white: #fefefe;
       font-size: 0.9vmax;
       font-weight: 300;
       width: 75%;
+      @media screen and (min-width: 1000px) {
+        font-size: 1vmax;
+      }
     }
   }
   .wrapper-5-button {
@@ -374,6 +421,9 @@ $white: #fefefe;
     cursor: pointer;
     transition: 250ms ease-in-out;
     font-weight: 300;
+    @media screen and (min-width: 1000px) {
+      font-size: 1.1vmax;
+    }
     &:hover {
       background-color: $black;
       color: $white;

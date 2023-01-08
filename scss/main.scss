@@ -1,6 +1,6 @@
-$main-color: #189b50;
+$main-color: #178748;
 $black: #000;
-$white: #fefefe;
+$white: #fff;
 
 @mixin center-img {
   background-position: center;
@@ -27,6 +27,9 @@ $white: #fefefe;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media screen and (orientation: portrait) {
+    background-image: url(../assets/img/mobile-bg.png);
+  }
   header {
     width: 100%;
     padding: 1vmax 0;
@@ -36,11 +39,16 @@ $white: #fefefe;
     position: absolute;
     top: 0;
     left: 0;
-
+    @media screen and (orientation: portrait) {
+      padding: 2vmax 0;
+    }
     .nav-logo {
       font-size: 2.8vmax;
       font-weight: 300;
       color: $black;
+      @media screen and (orientation: portrait) {
+        font-size: 4vmax;
+      }
       span {
         color: $main-color;
       }
@@ -89,9 +97,25 @@ $white: #fefefe;
     width: 50%;
     margin-top: 5vmax;
     margin-left: 17%;
+    @media screen and (orientation: portrait) {
+      width: 86%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 95%;
+    }
     .wrapper-1-title {
       font-weight: 500;
       font-size: 5vmax;
+      @media screen and (min-width: 1000px) {
+        font-size: 5.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 7vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: 6vmax;
+      }
       span {
         color: $main-color;
       }
@@ -101,6 +125,17 @@ $white: #fefefe;
       margin-top: 1vmax;
       font-weight: 300;
       font-size: 0.9vmax;
+      @media screen and (min-width: 1000px) {
+        width: 70%;
+        font-size: 1.1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        width: 90%;
+        font-size: 2vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: 2.2vmax;
+      }
     }
     .wrapper-1-button {
       position: relative;
@@ -112,6 +147,14 @@ $white: #fefefe;
       padding: 1vmax 2vmax;
       cursor: pointer;
       transition: 250ms ease-in-out;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        margin-top: 8vmax;
+        font-size: 2vmax;
+        padding: 2vmax 4vmax;
+      }
       &::before {
         content: '';
         width: 40%;
@@ -121,6 +164,10 @@ $white: #fefefe;
         right: 0;
         border-right: 3px solid $main-color;
         border-bottom: 3px solid $main-color;
+        @media screen and (orientation: portrait) {
+          width: 99%;
+          height: 95%;
+        }
       }
       &::after {
         content: '';
@@ -131,6 +178,10 @@ $white: #fefefe;
         left: 0;
         border-left: 3px solid $main-color;
         border-top: 3px solid $main-color;
+        @media screen and (orientation: portrait) {
+          width: 99%;
+          height: 95%;
+        }
       }
       &:hover {
         &::before,
@@ -150,41 +201,79 @@ $white: #fefefe;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  @media screen and (orientation: portrait) {
+    padding: 5vmax 5%;
+    flex-direction: column;
+  }
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    padding: 5vmax 2.5%;
+  }
   .wrapper-2-title {
     font-size: 1vmax;
     color: $black;
     font-weight: 400;
     margin-top: 0.75vmax;
+    @media screen and (min-width: 1000px) {
+      font-size: 1.1vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 1.8vmax;
+    }
   }
   .wrapper-2-spacer {
     width: 10%;
     height: 3px;
     margin: 1.5vmax 1vmax;
     background-color: $main-color;
+    @media screen and (orientation: portrait) {
+      display: none;
+    }
   }
   .wrapper-2-content {
     width: 70%;
+    @media screen and (min-width: 1000px) {
+      width: 75%;
+    }
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      margin-top: 2vmax;
+    }
     .wrapper-2-content-title {
       font-weight: 500;
       font-size: 2.4vmax;
       color: $main-color;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.3vmax;
+      }
     }
     .wrapper-2-content-description {
       font-weight: 300;
       margin-top: 1vmax;
       font-size: 1.1vmax;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        margin-top: 2vmax;
+      }
     }
   }
 }
 .wrapper-3 {
   width: 100%;
   padding: 8vmax 0;
-  //position: relative;
-  //background-image: url(../assets/img/wrapper-3-bg.png);
   @include center-img;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    padding: 2vmax 0;
+    flex-direction: column-reverse;
+  }
   .wrapper-3-content {
     width: 45%;
     background-color: $main-color;
@@ -195,10 +284,24 @@ $white: #fefefe;
     justify-content: center;
     align-items: flex-start;
     z-index: 10;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      margin: auto;
+      padding: 6vmax 10%;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      padding: 6vmax 5%;
+    }
     .wrapper-3-title {
       font-size: 2.4vmax;
       color: $white;
       font-weight: 500;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+      }
     }
     .wrapper-3-description {
       width: 90%;
@@ -206,28 +309,43 @@ $white: #fefefe;
       color: $white;
       font-weight: 300;
       margin-top: 1.5vmax;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+      }
     }
     .wrapper-3-button {
       border: none;
       background-color: unset;
-      color: $white;
+      color: $black;
       font-size: 1.1vmax;
       margin-top: 4vmax;
-      border-bottom: 2px solid $white;
+      border-bottom: 2px solid $black;
       transition: 250ms ease-in-out;
       cursor: pointer;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+      }
       &:hover {
         transition: 250ms ease-in-out;
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $white;
         color: $black;
       }
     }
   }
   .wrapper-3-img {
     width: 40vmax;
-    height: 30vmax;
+    height: 34vmax;
     @include center-img;
     background-image: url(../assets/img/wrapper-3-img.jpg);
+    @media screen and (orientation: portrait) {
+      width: 100%;
+    }
   }
 }
 .wrapper-4 {
@@ -238,63 +356,105 @@ $white: #fefefe;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column-reverse;
+    padding: 6vmax 0;
+    background-image: unset;
+  }
   .wrapper-4-container {
+    width: 35%;
+    margin-right: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3vmax;
-    .box1 {
-      margin-bottom: 2vmax;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: 5vmax 0 0 0;
     }
-    .box2 {
-      margin-top: 2vmax;
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
     }
-    .wrapper-4-box {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 3vmax;
-      .wrapper-4-container-item {
-        padding: 2vmax 0.25vmax;
-        border-radius: 20px;
-        background-color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        -webkit-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
-        box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
-        .wrapper-4-item-icon {
-          width: 3vmax;
-          height: 3vmax;
-          @include center-img;
+    .wrapper-4-item {
+      padding: 1.5vmax 1vmax;
+      border-radius: 20px;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -webkit-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
+      @media screen and (orientation: portrait) {
+        padding: 2.5vmax 1.5vmax;
+      }
+      .wrapper-4-item-icon {
+        width: 3vmax;
+        height: 3vmax;
+        @include center-img;
+        @media screen and (orientation: portrait) {
+          width: 6vmax;
+          height: 6vmax;
         }
-        .icon-1 {
-          background-image: url(../assets/icons/wrapper-4-icon-1.png);
+      }
+      .icon-1 {
+        background-image: url(../assets/icons/wrapper-4-icon-1.png);
+      }
+      .icon-2 {
+        background-image: url(../assets/icons/wrapper-4-icon-3.png);
+      }
+      .icon-3 {
+        background-image: url(../assets/icons/wrapper-4-icon-2.png);
+      }
+      .icon-4 {
+        background-image: url(../assets/icons/wrapper-4-icon-4.png);
+      }
+      .wrapper-4-item-title {
+        margin-top: 1vmax;
+        font-weight: 500;
+        font-size: 0.9vmax;
+        @media screen and (min-width: 1000px) {
+          font-size: 1;
         }
-        .icon-2 {
-          background-image: url(../assets/icons/wrapper-4-icon-2.png);
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
         }
-        .icon-3 {
-          background-image: url(../assets/icons/wrapper-4-icon-3.png);
-        }
-        .icon-4 {
-          background-image: url(../assets/icons/wrapper-4-icon-4.png);
-        }
-        .wrapper-4-item-title {
-          margin-top: 0.5vmax;
-          font-weight: 400;
+      }
+      .wrapper-4-item-description {
+        font-weight: 300;
+        margin-top: 1vmax;
+        font-size: 0.8vmax;
+        text-align: center;
+        @media screen and (min-width: 1000px) {
           font-size: 0.9vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
         }
       }
     }
   }
   .wrapper-4-content {
     width: 35%;
+    margin-left: -10%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-4-title {
       position: relative;
       font-size: 2.4vmax;
       font-weight: 500;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -304,27 +464,20 @@ $white: #fefefe;
         bottom: 0.75vmax;
         left: -1vmax;
         z-index: -1;
+        opacity: 0.8;
       }
     }
     .wrapper-4-description {
       font-size: 1.1vmax;
       font-weight: 300;
       margin-top: 1.5vmax;
-      width: 85%;
-    }
-    .wrapper-4-content-button {
-      border: none;
-      background-color: unset;
-      color: $main-color;
-      font-size: 1.1vmax;
-      margin-top: 4vmax;
-      border-bottom: 2px solid $main-color;
-      transition: 250ms ease-in-out;
-      cursor: pointer;
-      &:hover {
-        transition: 250ms ease-in-out;
-        border-bottom: 2px solid $black;
-        color: $black;
+      width: 100%;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        margin-top: 3vmax;
       }
     }
   }
@@ -337,13 +490,29 @@ $white: #fefefe;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    padding: 6vmax 0;
+  }
   .wrapper-5-content {
     width: 35%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-5-title {
       position: relative;
       font-size: 2.4vmax;
       font-weight: 500;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -353,6 +522,7 @@ $white: #fefefe;
         bottom: 0.75vmax;
         left: -1vmax;
         z-index: -1;
+        opacity: 0.8;
       }
     }
     .wrapper-5-description {
@@ -360,6 +530,13 @@ $white: #fefefe;
       font-weight: 300;
       margin-top: 1.5vmax;
       width: 85%;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        margin-top: 3vmax;
+      }
     }
     .wrapper-5-content-button {
       border: none;
@@ -370,6 +547,12 @@ $white: #fefefe;
       border-bottom: 2px solid $main-color;
       transition: 250ms ease-in-out;
       cursor: pointer;
+      @media screen and (min-width: 1000px) {
+        font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+      }
       &:hover {
         transition: 250ms ease-in-out;
         border-bottom: 2px solid $black;
@@ -383,6 +566,13 @@ $white: #fefefe;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3vmax;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: 5vmax 0 0 0;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-5-item,
     .wrapper-5-item-more {
       padding: 1.5vmax 1vmax;
@@ -395,11 +585,17 @@ $white: #fefefe;
       -webkit-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
       box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
-
+      @media screen and (orientation: portrait) {
+        padding: 2.5vmax 1.5vmax;
+      }
       .wrapper-5-item-icon {
         width: 3vmax;
         height: 3vmax;
         @include center-img;
+        @media screen and (orientation: portrait) {
+          width: 6vmax;
+          height: 6vmax;
+        }
       }
       .icon-1 {
         background-image: url(../assets/icons/wrapper-5-icon-1.png);
@@ -414,12 +610,25 @@ $white: #fefefe;
         margin-top: 1vmax;
         font-weight: 500;
         font-size: 0.9vmax;
+        @media screen and (min-width: 1000px) {
+          font-size: 1;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+          text-align: center;
+        }
       }
       .wrapper-5-item-description {
         font-weight: 300;
         margin-top: 1vmax;
         font-size: 0.8vmax;
         text-align: center;
+        @media screen and (min-width: 1000px) {
+          font-size: 0.9vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
+        }
       }
     }
     .wrapper-5-item-more {
@@ -430,6 +639,12 @@ $white: #fefefe;
         font-size: 0.9vmax;
         color: $main-color;
         font-weight: 500;
+        @media screen and (min-width: 1000px) {
+          font-size: 1vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
     }
   }
@@ -442,14 +657,32 @@ $white: #fefefe;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    background-image: unset;
+    padding: 6vmax 0;
+  }
   .wrapper-6-content {
     margin-left: 10%;
     width: 55%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-6-title {
       position: relative;
       font-size: 2.4vmax;
       font-weight: 500;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -459,6 +692,10 @@ $white: #fefefe;
         bottom: 0.75vmax;
         left: -1vmax;
         z-index: -1;
+        opacity: 0.8;
+        @media screen and (orientation: portrait) {
+          bottom: 6.25vmax;
+        }
       }
     }
     .wrapper-6-container {
@@ -469,6 +706,10 @@ $white: #fefefe;
       column-gap: 1vmax;
       margin-top: 6vmax;
       grid-template-columns: 3vmax 1fr;
+      @media screen and (orientation: portrait) {
+        width: 90%;
+        margin: 5vmax auto 0 auto;
+      }
       .wrapper-6-number {
         font-weight: 500;
         font-size: 1.2vmax;
@@ -480,6 +721,12 @@ $white: #fefefe;
         width: 2.5vmax;
         height: 2.5vmax;
         border-radius: 50%;
+        @media screen and (min-width: 1000px) {
+          font-size: 1.3vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
       .wrapper-6-text {
         -webkit-box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.4);
@@ -492,12 +739,24 @@ $white: #fefefe;
         font-size: 1.1vmax;
         font-weight: 500;
         color: $black;
+        @media screen and (min-width: 1000px) {
+          font-size: 1.2vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
       .wrapper-6-item-description {
         font-weight: 300;
         font-size: 0.8vmax;
         margin-top: 0.5vmax;
         color: $black;
+        @media screen and (min-width: 1000px) {
+          font-size: 0.9vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
+        }
       }
     }
   }
@@ -505,16 +764,25 @@ $white: #fefefe;
 
 .wrapper-7 {
   width: 100%;
-  padding: 5vmax 0;
+  padding: 5vmax 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (orientation: portrait) {
+    padding: 6vmax 0 0 0;
+  }
   .wrapper-7-title {
     position: absolute;
     left: 10%;
     font-size: 2.4vmax;
     font-weight: 500;
     z-index: 1;
+    @media screen and (min-width: 1000px) {
+      font-size: 2.5vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 3.5vmax;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -524,70 +792,118 @@ $white: #fefefe;
       bottom: 0.75vmax;
       left: -1vmax;
       z-index: -1;
+      opacity: 0.8;
     }
   }
   .wrapper-7-container {
     position: relative;
     margin-top: 10vmax;
     width: 66%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     row-gap: 5vmax;
-    .wrapper-7-img {
-      width: 100%;
-      height: 22vmax;
-      background-image: url(../assets/img/wrapper-3-img.jpg);
-      @include center-img;
+    @media screen and (orientation: portrait) {
+      width: 80%;
     }
-    .wrapper-7-content {
-      width: 110%;
-      margin: auto 0 auto 0;
-      z-index: 1;
-      .wrapper-7-content-text {
-        background-color: $main-color;
-        padding: 3vmax;
-        .wrapper-7-content-title {
-          font-weight: 500;
-          font-size: 1vmax;
-          color: $white;
-        }
-        .wrapper-7-content-description {
-          font-weight: 300;
-          font-size: 0.8vmax;
-          color: $white;
-          margin-top: 1vmax;
-        }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
+    .wrapper-7-item {
+      display: flex;
+      margin-bottom: 5vmax;
+      @media screen and (orientation: portrait) {
+        flex-direction: column;
       }
-      .wrapper-7-content-buttons {
-        padding: 0 10% 0 10%;
-        margin-top: 1vmax;
-        display: flex;
-        justify-content: flex-end;
-        .wrapper-7-view-btn {
-          font-size: 0.8vmax;
-          font-weight: 400;
-          color: $black;
-          border: none;
-          border-radius: 20px;
-          margin-left: 1vmax;
-          background-color: unset;
-          cursor: pointer;
-          transition: 250ms ease-in-out;
-          &:hover {
+      .wrapper-7-img {
+        width: 100%;
+        height: 22vmax;
+        background-image: url(../assets/img/wrapper-3-img.jpg);
+        @include center-img;
+      }
+      .wrapper-7-content {
+        width: 110%;
+        margin: auto 0 auto 0;
+        z-index: 1;
+        @media screen and (orientation: portrait) {
+          width: 100%;
+        }
+        .wrapper-7-content-text {
+          background-color: $main-color;
+          padding: 3vmax;
+          .wrapper-7-content-title {
+            font-weight: 500;
+            font-size: 1vmax;
+            color: $white;
+            @media screen and (min-width: 1000px) {
+              font-size: 1.1vmax;
+            }
+            @media screen and (orientation: portrait) {
+              font-size: 1.8vmax;
+            }
+          }
+          .wrapper-7-content-description {
+            font-weight: 300;
+            font-size: 0.8vmax;
+            color: $white;
+            margin-top: 1vmax;
+            @media screen and (min-width: 1000px) {
+              font-size: 0.9vmax;
+            }
+            @media screen and (orientation: portrait) {
+              font-size: 1.3vmax;
+              margin-top: 3vmax;
+            }
+          }
+        }
+        .wrapper-7-content-buttons {
+          padding: 0 10% 0 10%;
+          margin-top: 1vmax;
+          display: flex;
+          justify-content: flex-end;
+          .wrapper-7-view-btn {
+            font-size: 0.8vmax;
+            font-weight: 400;
+            color: $black;
+            border: none;
+            border-radius: 20px;
+            margin-left: 1vmax;
+            background-color: unset;
+            cursor: pointer;
             transition: 250ms ease-in-out;
-            color: $main-color;
+            @media screen and (min-width: 1000px) {
+              font-size: 0.9vmax;
+            }
+            @media screen and (orientation: portrait) {
+              font-size: 1.5vmax;
+            }
+            &:hover {
+              transition: 250ms ease-in-out;
+              color: $main-color;
+            }
+          }
+        }
+        .left {
+          justify-content: flex-start;
+          @media screen and (orientation: portrait) {
+            justify-content: flex-end;
           }
         }
       }
+      .right {
+        margin: auto 0 auto -7%;
+        @media screen and (orientation: portrait) {
+          margin: auto;
+        }
+      }
       .left {
-        justify-content: flex-start;
+        margin: auto -7% auto 0;
+        @media screen and (orientation: portrait) {
+          margin: auto;
+        }
       }
     }
-    .right {
-      margin: auto 0 auto -10%;
-    }
-    .left {
-      margin: auto -10% auto 0;
+    .item-left {
+      @media screen and (orientation: portrait) {
+        flex-direction: column-reverse;
+      }
     }
   }
 }
@@ -599,18 +915,35 @@ $white: #fefefe;
   justify-content: center;
   align-items: center;
   position: relative;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
   .wrapper-8-content {
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      align-items: center;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-8-title {
       font-size: 2.4vmax;
       font-weight: 500;
       color: $black;
       position: relative;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+        text-align: center;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -620,6 +953,11 @@ $white: #fefefe;
         top: 2.25vmax;
         left: -1vmax;
         z-index: -1;
+        opacity: 0.8;
+        @media screen and (orientation: portrait) {
+          top: 3.5vmax;
+          display: none;
+        }
       }
     }
     .wrapper-8-description {
@@ -627,6 +965,13 @@ $white: #fefefe;
       font-size: 0.9vmax;
       font-weight: 300;
       width: 75%;
+      @media screen and (min-width: 1000px) {
+        font-size: 1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        text-align: center;
+      }
     }
   }
   .wrapper-8-button {
@@ -640,6 +985,13 @@ $white: #fefefe;
     cursor: pointer;
     transition: 250ms ease-in-out;
     font-weight: 300;
+    @media screen and (min-width: 1000px) {
+      font-size: 1.1vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 1.8vmax;
+      margin-top: 3vmax;
+    }
     &:hover {
       background-color: $black;
       color: $white;
