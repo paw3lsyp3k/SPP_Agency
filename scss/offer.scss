@@ -44,7 +44,9 @@ $white: #fff;
       font-size: 2.8vmax;
       font-weight: 300;
       color: $black;
-
+      @media screen and (orientation: portrait) {
+        font-size: 4vmax;
+      }
       span {
         color: $main-color;
       }
@@ -99,12 +101,26 @@ $white: #fff;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      padding: 0 8%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      padding: 0 3% 8vmax 3%;
+    }
     .wrapper-1-title {
       font-size: 3vmax;
       color: $black;
       font-weight: 500;
       @media screen and (min-width: 1000px) {
         font-size: 3.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 6vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: 5vmax;
       }
       span {
         color: $main-color;
@@ -118,6 +134,9 @@ $white: #fff;
       width: 90%;
       @media screen and (min-width: 1000px) {
         font-size: 1.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 2vmax;
       }
     }
     .wrapper-1-content-arrow {
@@ -133,6 +152,11 @@ $white: #fff;
       transition: 300ms ease-in-out;
       border: none;
       background-color: unset;
+      @media screen and (orientation: portrait) {
+        bottom: 10vmax;
+        width: 8vmax;
+        height: 8vmax;
+      }
       &:hover {
         transition: 300ms ease-in-out;
         bottom: 3.75vmax;
@@ -144,6 +168,9 @@ $white: #fff;
 .wrapper-2 {
   width: 100%;
   padding: 5vmax 0;
+  @media screen and (orientation: portrait) {
+    padding: 5vmax 0 0 0;
+  }
   .wrapper-2-title {
     font-size: 3.4vmax;
     font-weight: 500;
@@ -151,6 +178,9 @@ $white: #fff;
     position: relative;
     @media screen and (min-width: 1000px) {
       font-size: 3.5vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 4vmax;
     }
     &::before {
       content: '01';
@@ -161,6 +191,9 @@ $white: #fff;
       color: $main-color;
       z-index: -1;
       opacity: 0.4;
+      @media screen and (orientation: portrait) {
+        font-size: 8vmax;
+      }
     }
   }
   .wrapper-2-content {
@@ -169,6 +202,10 @@ $white: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+      margin-top: 3vmax;
+    }
     .wrapper-2-img {
       width: 30vmax;
       height: 35vmax;
@@ -177,10 +214,13 @@ $white: #fff;
       background-size: cover;
       position: relative;
       @media screen and (orientation: portrait) {
-        width: 100%;
+        width: 80%;
         height: 30vmax;
         margin-top: 6vmax;
         margin-bottom: 0;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
       }
     }
     .wrapper-2-content-text {
@@ -189,13 +229,22 @@ $white: #fff;
       margin-left: -3vmax;
       z-index: 1;
       background-color: $main-color;
-      //border: 8px solid $main-color;
+      @media screen and (orientation: portrait) {
+        width: 80%;
+        margin: auto;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
+      }
       .wrapper-2-text-title {
         font-size: 2.4vmax;
         font-weight: 500;
         color: rgb(240, 240, 240);
         @media screen and (min-width: 1000px) {
           font-size: 2.5vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 3.5vmax;
         }
       }
       .wrapper-2-text-description {
@@ -205,6 +254,9 @@ $white: #fff;
         margin-top: 2vmax;
         @media screen and (min-width: 1000px) {
           font-size: 1.2vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
         }
       }
     }
@@ -217,6 +269,9 @@ $white: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column-reverse;
+  }
   .wrapper-3-container {
     width: 35%;
     display: grid;
@@ -224,6 +279,13 @@ $white: #fff;
     margin-right: 6%;
     row-gap: 2vmax;
     grid-template-columns: 1fr 1fr;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: 6vmax auto 0 auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-3-container-item {
       width: 100%;
       .wrapper-3-item-header {
@@ -234,8 +296,11 @@ $white: #fff;
         .wrapper-3-item-icon {
           width: 2vmax;
           height: 2vmax;
-
           @include center-img;
+          @media screen and (orientation: portrait) {
+            width: 4vmax;
+            height: 4vmax;
+          }
         }
         .icon1 {
           background-image: url(../assets/icons/wrapper-3-offer-icon-1.png);
@@ -263,6 +328,9 @@ $white: #fff;
           @media screen and (min-width: 1000px) {
             font-size: 1.3vmax;
           }
+          @media screen and (orientation: portrait) {
+            font-size: 1.8vmax;
+          }
         }
       }
       .wrapper-3-item-description {
@@ -272,6 +340,9 @@ $white: #fff;
         color: $black;
         @media screen and (min-width: 1000px) {
           font-size: 1vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
         }
       }
     }
@@ -284,10 +355,12 @@ $white: #fff;
     background-size: cover;
     position: relative;
     @media screen and (orientation: portrait) {
-      width: 100%;
+      width: 80%;
       height: 30vmax;
-      margin-top: 6vmax;
       margin-bottom: 0;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
     }
   }
 }
@@ -298,6 +371,9 @@ $white: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column-reverse;
+  }
   .wrapper-4-img {
     width: 30vmax;
     height: 35vmax;
@@ -306,15 +382,25 @@ $white: #fff;
     background-size: cover;
     position: relative;
     @media screen and (orientation: portrait) {
-      width: 100%;
+      width: 80%;
       height: 30vmax;
       margin-top: 6vmax;
       margin-bottom: 0;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
     }
   }
   .wrapper-4-container {
     width: 35%;
     margin-left: 6%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-4-title {
       font-size: 2.4vmax;
       font-weight: 500;
@@ -323,6 +409,9 @@ $white: #fff;
       position: relative;
       @media screen and (min-width: 1000px) {
         font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
       }
       &::before {
         content: '';
@@ -346,6 +435,10 @@ $white: #fff;
         height: 1.5vmax;
         background-image: url(../assets/icons/wrapper-4-offer-icon.png);
         @include center-img;
+        @media screen and (orientation: portrait) {
+          width: 2.5vmax;
+          height: 2.5vmax;
+        }
       }
       .wrapper-4-content-text {
         font-weight: 300;
@@ -353,24 +446,37 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1.1vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
     }
   }
 }
 .wrapper-5 {
   width: 100%;
-  padding: 5vmax 0;
+  padding: 6vmax 0;
   background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
   .wrapper-5-content {
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      align-items: center;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-5-title {
       font-size: 2.4vmax;
       font-weight: 500;
@@ -379,6 +485,10 @@ $white: #fff;
       z-index: 1;
       @media screen and (min-width: 1000px) {
         font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+        text-align: center;
       }
       &::before {
         content: '';
@@ -389,6 +499,9 @@ $white: #fff;
         top: 2.25vmax;
         left: -1vmax;
         z-index: -1;
+        @media screen and (orientation: portrait) {
+          display: none;
+        }
       }
     }
     .wrapper-5-description {
@@ -398,6 +511,13 @@ $white: #fff;
       width: 75%;
       @media screen and (min-width: 1000px) {
         font-size: 1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        text-align: center;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
       }
     }
   }
@@ -414,6 +534,10 @@ $white: #fff;
     font-weight: 300;
     @media screen and (min-width: 1000px) {
       font-size: 1.1vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 1.8vmax;
+      margin-top: 3vmax;
     }
     &:hover {
       background-color: $black;
@@ -433,6 +557,9 @@ $white: #fff;
     @media screen and (min-width: 1000px) {
       font-size: 3.5vmax;
     }
+    @media screen and (orientation: portrait) {
+      font-size: 4vmax;
+    }
     &::before {
       content: '02';
       position: absolute;
@@ -442,6 +569,9 @@ $white: #fff;
       color: $main-color;
       z-index: -1;
       opacity: 0.4;
+      @media screen and (orientation: portrait) {
+        font-size: 8vmax;
+      }
     }
   }
   .wrapper-6-content {
@@ -450,6 +580,9 @@ $white: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+    }
     .wrapper-6-img {
       width: 30vmax;
       height: 35vmax;
@@ -458,10 +591,12 @@ $white: #fff;
       background-size: cover;
       position: relative;
       @media screen and (orientation: portrait) {
-        width: 100%;
+        width: 80%;
         height: 30vmax;
-        margin-top: 6vmax;
         margin-bottom: 0;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
       }
     }
     .wrapper-6-content-text {
@@ -470,12 +605,22 @@ $white: #fff;
       margin-right: -3vmax;
       z-index: 1;
       background-color: $main-color;
+      @media screen and (orientation: portrait) {
+        width: 80%;
+        margin: auto;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
+      }
       .wrapper-6-text-title {
         font-size: 2.4vmax;
         font-weight: 500;
         color: $white;
         @media screen and (min-width: 1000px) {
           font-size: 2.5vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 3.5vmax;
         }
       }
       .wrapper-6-text-description {
@@ -485,6 +630,9 @@ $white: #fff;
         margin-top: 2vmax;
         @media screen and (min-width: 1000px) {
           font-size: 1.2vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
         }
       }
     }
@@ -501,12 +649,24 @@ $white: #fff;
     width: 70%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    //grid-template-rows: repeat(3, 1fr);
     gap: 2vmax;
     grid-template-areas:
       'img1 img2 text text'
       'img3 img4 text text'
       'img5 img5 img5 img6';
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'text text'
+        'img1 img2 '
+        'img3 img4'
+        'img5 img6';
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-7-content {
       padding: 3vmax;
       grid-area: text;
@@ -514,12 +674,18 @@ $white: #fff;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      @media screen and (orientation: portrait) {
+        padding: 3vmax 0;
+      }
       .wrapper-7-content-title {
         font-weight: 500;
         font-size: 1.4vmax;
         color: $black;
         @media screen and (min-width: 1000px) {
           font-size: 1.5vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 3.5vmax;
         }
       }
       .wrapper-7-content-description {
@@ -529,12 +695,18 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
     }
     .wrapper-7-img {
       width: 100%;
       height: 10vmax;
       background-color: darkorange;
+      @media screen and (orientation: portrait) {
+        height: 20vmax;
+      }
     }
     .w7-img1 {
       grid-area: 'img1';
@@ -568,6 +740,9 @@ $white: #fff;
     @media screen and (min-width: 1000px) {
       font-size: 3.5vmax;
     }
+    @media screen and (orientation: portrait) {
+      font-size: 4vmax;
+    }
     &::before {
       content: '03';
       position: absolute;
@@ -577,6 +752,9 @@ $white: #fff;
       color: $main-color;
       z-index: -1;
       opacity: 0.4;
+      @media screen and (orientation: portrait) {
+        font-size: 8vmax;
+      }
     }
   }
   .wrapper-8-content {
@@ -585,6 +763,9 @@ $white: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+    }
     .wrapper-8-img {
       width: 30vmax;
       height: 35vmax;
@@ -593,10 +774,12 @@ $white: #fff;
       background-size: cover;
       position: relative;
       @media screen and (orientation: portrait) {
-        width: 100%;
+        width: 80%;
         height: 30vmax;
-        margin-top: 6vmax;
         margin-bottom: 0;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
       }
     }
     .wrapper-8-content-text {
@@ -605,12 +788,22 @@ $white: #fff;
       margin-right: -3vmax;
       z-index: 1;
       background-color: $main-color;
+      @media screen and (orientation: portrait) {
+        width: 80%;
+        margin: auto;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
+      }
       .wrapper-8-text-title {
         font-size: 2.4vmax;
         font-weight: 500;
         color: $white;
         @media screen and (min-width: 1000px) {
           font-size: 2.5vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 3.5vmax;
         }
       }
       .wrapper-8-text-description {
@@ -620,6 +813,9 @@ $white: #fff;
         margin-top: 2vmax;
         @media screen and (min-width: 1000px) {
           font-size: 1.2vmax;
+        }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
         }
       }
     }
@@ -633,18 +829,35 @@ $white: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
   .wrapper-9-content {
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      align-items: center;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-9-title {
       font-size: 2.4vmax;
       font-weight: 500;
       color: $white;
       position: relative;
       z-index: 1;
+      @media screen and (min-width: 1000px) {
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+        text-align: center;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -654,6 +867,9 @@ $white: #fff;
         top: 2.25vmax;
         left: -1vmax;
         z-index: -1;
+        @media screen and (orientation: portrait) {
+          display: none;
+        }
       }
     }
     .wrapper-9-description {
@@ -662,6 +878,16 @@ $white: #fff;
       font-weight: 300;
       width: 75%;
       color: $white;
+      @media screen and (min-width: 1000px) {
+        font-size: 1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        text-align: center;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
+      }
     }
   }
   .wrapper-9-button {
@@ -675,6 +901,13 @@ $white: #fff;
     cursor: pointer;
     transition: 250ms ease-in-out;
     font-weight: 300;
+    @media screen and (min-width: 1000px) {
+      font-size: 1.1vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 1.8vmax;
+      margin-top: 3vmax;
+    }
     &:hover {
       background-color: $white;
       color: $black;

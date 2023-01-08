@@ -39,6 +39,11 @@
   font-weight: 300;
   color: #000;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-1 header .nav-logo {
+    font-size: 4vmax;
+  }
+}
 .wrapper-1 header .nav-logo span {
   color: #178748;
 }
@@ -90,6 +95,18 @@
   align-items: flex-start;
   justify-content: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-1 .wrapper-1-content {
+    width: 100%;
+    padding: 0 8%;
+    margin: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 .wrapper-1-content {
+    padding: 0 3% 8vmax 3%;
+  }
+}
 .wrapper-1 .wrapper-1-content .wrapper-1-title {
   font-size: 3vmax;
   color: #000;
@@ -98,6 +115,16 @@
 @media screen and (min-width: 1000px) {
   .wrapper-1 .wrapper-1-content .wrapper-1-title {
     font-size: 3.2vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-title {
+    font-size: 6vmax;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-title {
+    font-size: 5vmax;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-title span {
@@ -113,6 +140,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-1 .wrapper-1-content .wrapper-1-description {
     font-size: 1.2vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-description {
+    font-size: 2vmax;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-arrow {
@@ -131,6 +163,13 @@
   border: none;
   background-color: unset;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-content-arrow {
+    bottom: 10vmax;
+    width: 8vmax;
+    height: 8vmax;
+  }
+}
 .wrapper-1 .wrapper-1-content .wrapper-1-content-arrow:hover {
   transition: 300ms ease-in-out;
   bottom: 3.75vmax;
@@ -139,6 +178,11 @@
 .wrapper-2 {
   width: 100%;
   padding: 5vmax 0;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-2 {
+    padding: 5vmax 0 0 0;
+  }
 }
 .wrapper-2 .wrapper-2-title {
   font-size: 3.4vmax;
@@ -151,6 +195,11 @@
     font-size: 3.5vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-title {
+    font-size: 4vmax;
+  }
+}
 .wrapper-2 .wrapper-2-title::before {
   content: "01";
   position: absolute;
@@ -161,12 +210,23 @@
   z-index: -1;
   opacity: 0.4;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-title::before {
+    font-size: 8vmax;
+  }
+}
 .wrapper-2 .wrapper-2-content {
   width: 100%;
   margin-top: 7vmax;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-content {
+    flex-direction: column;
+    margin-top: 3vmax;
+  }
 }
 .wrapper-2 .wrapper-2-content .wrapper-2-img {
   width: 30vmax;
@@ -178,10 +238,15 @@
 }
 @media screen and (orientation: portrait) {
   .wrapper-2 .wrapper-2-content .wrapper-2-img {
-    width: 100%;
+    width: 80%;
     height: 30vmax;
     margin-top: 6vmax;
     margin-bottom: 0;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-img {
+    width: 90%;
   }
 }
 .wrapper-2 .wrapper-2-content .wrapper-2-content-text {
@@ -191,6 +256,17 @@
   z-index: 1;
   background-color: #178748;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-text {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-text {
+    width: 90%;
+  }
+}
 .wrapper-2 .wrapper-2-content .wrapper-2-content-text .wrapper-2-text-title {
   font-size: 2.4vmax;
   font-weight: 500;
@@ -199,6 +275,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-2 .wrapper-2-content .wrapper-2-content-text .wrapper-2-text-title {
     font-size: 2.5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-text .wrapper-2-text-title {
+    font-size: 3.5vmax;
   }
 }
 .wrapper-2 .wrapper-2-content .wrapper-2-content-text .wrapper-2-text-description {
@@ -212,6 +293,11 @@
     font-size: 1.2vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-2 .wrapper-2-content .wrapper-2-content-text .wrapper-2-text-description {
+    font-size: 1.8vmax;
+  }
+}
 
 .wrapper-3 {
   width: 100%;
@@ -219,6 +305,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-3 {
+    flex-direction: column-reverse;
+  }
 }
 .wrapper-3 .wrapper-3-container {
   width: 35%;
@@ -228,6 +319,17 @@
   margin-right: 6%;
   row-gap: 2vmax;
   grid-template-columns: 1fr 1fr;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-container {
+    width: 80%;
+    margin: 6vmax auto 0 auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-3 .wrapper-3-container {
+    width: 90%;
+  }
 }
 .wrapper-3 .wrapper-3-container .wrapper-3-container-item {
   width: 100%;
@@ -244,6 +346,12 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-header .wrapper-3-item-icon {
+    width: 4vmax;
+    height: 4vmax;
+  }
 }
 .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-header .icon1 {
   background-image: url(../assets/icons/wrapper-3-offer-icon-1.png);
@@ -274,6 +382,11 @@
     font-size: 1.3vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-header .wrapper-3-item-title {
+    font-size: 1.8vmax;
+  }
+}
 .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-description {
   font-weight: 300;
   font-size: 0.9vmax;
@@ -283,6 +396,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-description {
     font-size: 1vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-3 .wrapper-3-container .wrapper-3-container-item .wrapper-3-item-description {
+    font-size: 1.3vmax;
   }
 }
 .wrapper-3 .wrapper-3-img {
@@ -295,10 +413,14 @@
 }
 @media screen and (orientation: portrait) {
   .wrapper-3 .wrapper-3-img {
-    width: 100%;
+    width: 80%;
     height: 30vmax;
-    margin-top: 6vmax;
     margin-bottom: 0;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-3 .wrapper-3-img {
+    width: 90%;
   }
 }
 
@@ -308,6 +430,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-4 {
+    flex-direction: column-reverse;
+  }
 }
 .wrapper-4 .wrapper-4-img {
   width: 30vmax;
@@ -319,15 +446,31 @@
 }
 @media screen and (orientation: portrait) {
   .wrapper-4 .wrapper-4-img {
-    width: 100%;
+    width: 80%;
     height: 30vmax;
     margin-top: 6vmax;
     margin-bottom: 0;
   }
 }
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-4 .wrapper-4-img {
+    width: 90%;
+  }
+}
 .wrapper-4 .wrapper-4-container {
   width: 35%;
   margin-left: 6%;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-4 .wrapper-4-container {
+    width: 90%;
+  }
 }
 .wrapper-4 .wrapper-4-container .wrapper-4-title {
   font-size: 2.4vmax;
@@ -339,6 +482,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-4 .wrapper-4-container .wrapper-4-title {
     font-size: 2.5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-container .wrapper-4-title {
+    font-size: 3.5vmax;
   }
 }
 .wrapper-4 .wrapper-4-container .wrapper-4-title::before {
@@ -367,6 +515,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-container .wrapper-4-content .wrapper-4-content-icon {
+    width: 2.5vmax;
+    height: 2.5vmax;
+  }
+}
 .wrapper-4 .wrapper-4-container .wrapper-4-content .wrapper-4-content-text {
   font-weight: 300;
   font-size: 1vmax;
@@ -376,15 +530,25 @@
     font-size: 1.1vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-4 .wrapper-4-container .wrapper-4-content .wrapper-4-content-text {
+    font-size: 1.8vmax;
+  }
+}
 
 .wrapper-5 {
   width: 100%;
-  padding: 5vmax 0;
+  padding: 6vmax 0;
   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-5 {
+    flex-direction: column;
+  }
 }
 .wrapper-5 .wrapper-5-content {
   width: 40%;
@@ -392,6 +556,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-content {
+    width: 80%;
+    align-items: center;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-5 .wrapper-5-content {
+    width: 90%;
+  }
 }
 .wrapper-5 .wrapper-5-content .wrapper-5-title {
   font-size: 2.4vmax;
@@ -405,6 +580,12 @@
     font-size: 2.5vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-content .wrapper-5-title {
+    font-size: 3.5vmax;
+    text-align: center;
+  }
+}
 .wrapper-5 .wrapper-5-content .wrapper-5-title::before {
   content: "";
   position: absolute;
@@ -415,6 +596,11 @@
   left: -1vmax;
   z-index: -1;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-content .wrapper-5-title::before {
+    display: none;
+  }
+}
 .wrapper-5 .wrapper-5-content .wrapper-5-description {
   margin-top: 2vmax;
   font-size: 0.9vmax;
@@ -424,6 +610,17 @@
 @media screen and (min-width: 1000px) {
   .wrapper-5 .wrapper-5-content .wrapper-5-description {
     font-size: 1vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-content .wrapper-5-description {
+    font-size: 1.8vmax;
+    text-align: center;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-5 .wrapper-5-content .wrapper-5-description {
+    width: 90%;
   }
 }
 .wrapper-5 .wrapper-5-button {
@@ -441,6 +638,12 @@
 @media screen and (min-width: 1000px) {
   .wrapper-5 .wrapper-5-button {
     font-size: 1.1vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-5 .wrapper-5-button {
+    font-size: 1.8vmax;
+    margin-top: 3vmax;
   }
 }
 .wrapper-5 .wrapper-5-button:hover {
@@ -464,6 +667,11 @@
     font-size: 3.5vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-title {
+    font-size: 4vmax;
+  }
+}
 .wrapper-6 .wrapper-6-title::before {
   content: "02";
   position: absolute;
@@ -474,12 +682,22 @@
   z-index: -1;
   opacity: 0.4;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-title::before {
+    font-size: 8vmax;
+  }
+}
 .wrapper-6 .wrapper-6-content {
   width: 100%;
   margin-top: 7vmax;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-content {
+    flex-direction: column;
+  }
 }
 .wrapper-6 .wrapper-6-content .wrapper-6-img {
   width: 30vmax;
@@ -491,10 +709,14 @@
 }
 @media screen and (orientation: portrait) {
   .wrapper-6 .wrapper-6-content .wrapper-6-img {
-    width: 100%;
+    width: 80%;
     height: 30vmax;
-    margin-top: 6vmax;
     margin-bottom: 0;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-6 .wrapper-6-content .wrapper-6-img {
+    width: 90%;
   }
 }
 .wrapper-6 .wrapper-6-content .wrapper-6-content-text {
@@ -503,6 +725,17 @@
   margin-right: -3vmax;
   z-index: 1;
   background-color: #178748;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-content .wrapper-6-content-text {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-6 .wrapper-6-content .wrapper-6-content-text {
+    width: 90%;
+  }
 }
 .wrapper-6 .wrapper-6-content .wrapper-6-content-text .wrapper-6-text-title {
   font-size: 2.4vmax;
@@ -514,6 +747,11 @@
     font-size: 2.5vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-content .wrapper-6-content-text .wrapper-6-text-title {
+    font-size: 3.5vmax;
+  }
+}
 .wrapper-6 .wrapper-6-content .wrapper-6-content-text .wrapper-6-text-description {
   font-size: 1.1vmax;
   font-weight: 300;
@@ -523,6 +761,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-6 .wrapper-6-content .wrapper-6-content-text .wrapper-6-text-description {
     font-size: 1.2vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-6 .wrapper-6-content .wrapper-6-content-text .wrapper-6-text-description {
+    font-size: 1.8vmax;
   }
 }
 
@@ -538,9 +781,20 @@
   width: 70%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 2vmax;
   grid-template-areas: "img1 img2 text text" "img3 img4 text text" "img5 img5 img5 img6";
+}
+@media screen and (orientation: portrait) {
+  .wrapper-7 .wrapper-7-container {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "text text" "img1 img2 " "img3 img4" "img5 img6";
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-7 .wrapper-7-container {
+    width: 90%;
+  }
 }
 .wrapper-7 .wrapper-7-container .wrapper-7-content {
   padding: 3vmax;
@@ -550,6 +804,11 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-7 .wrapper-7-container .wrapper-7-content {
+    padding: 3vmax 0;
+  }
+}
 .wrapper-7 .wrapper-7-container .wrapper-7-content .wrapper-7-content-title {
   font-weight: 500;
   font-size: 1.4vmax;
@@ -558,6 +817,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-7 .wrapper-7-container .wrapper-7-content .wrapper-7-content-title {
     font-size: 1.5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-7 .wrapper-7-container .wrapper-7-content .wrapper-7-content-title {
+    font-size: 3.5vmax;
   }
 }
 .wrapper-7 .wrapper-7-container .wrapper-7-content .wrapper-7-content-description {
@@ -570,10 +834,20 @@
     font-size: 1vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-7 .wrapper-7-container .wrapper-7-content .wrapper-7-content-description {
+    font-size: 1.8vmax;
+  }
+}
 .wrapper-7 .wrapper-7-container .wrapper-7-img {
   width: 100%;
   height: 10vmax;
   background-color: darkorange;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-7 .wrapper-7-container .wrapper-7-img {
+    height: 20vmax;
+  }
 }
 .wrapper-7 .wrapper-7-container .w7-img1 {
   grid-area: "img1";
@@ -610,6 +884,11 @@
     font-size: 3.5vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-title {
+    font-size: 4vmax;
+  }
+}
 .wrapper-8 .wrapper-8-title::before {
   content: "03";
   position: absolute;
@@ -620,12 +899,22 @@
   z-index: -1;
   opacity: 0.4;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-title::before {
+    font-size: 8vmax;
+  }
+}
 .wrapper-8 .wrapper-8-content {
   width: 100%;
   margin-top: 7vmax;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-content {
+    flex-direction: column;
+  }
 }
 .wrapper-8 .wrapper-8-content .wrapper-8-img {
   width: 30vmax;
@@ -637,10 +926,14 @@
 }
 @media screen and (orientation: portrait) {
   .wrapper-8 .wrapper-8-content .wrapper-8-img {
-    width: 100%;
+    width: 80%;
     height: 30vmax;
-    margin-top: 6vmax;
     margin-bottom: 0;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-8 .wrapper-8-content .wrapper-8-img {
+    width: 90%;
   }
 }
 .wrapper-8 .wrapper-8-content .wrapper-8-content-text {
@@ -650,6 +943,17 @@
   z-index: 1;
   background-color: #178748;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-content .wrapper-8-content-text {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-8 .wrapper-8-content .wrapper-8-content-text {
+    width: 90%;
+  }
+}
 .wrapper-8 .wrapper-8-content .wrapper-8-content-text .wrapper-8-text-title {
   font-size: 2.4vmax;
   font-weight: 500;
@@ -658,6 +962,11 @@
 @media screen and (min-width: 1000px) {
   .wrapper-8 .wrapper-8-content .wrapper-8-content-text .wrapper-8-text-title {
     font-size: 2.5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-content .wrapper-8-content-text .wrapper-8-text-title {
+    font-size: 3.5vmax;
   }
 }
 .wrapper-8 .wrapper-8-content .wrapper-8-content-text .wrapper-8-text-description {
@@ -671,6 +980,11 @@
     font-size: 1.2vmax;
   }
 }
+@media screen and (orientation: portrait) {
+  .wrapper-8 .wrapper-8-content .wrapper-8-content-text .wrapper-8-text-description {
+    font-size: 1.8vmax;
+  }
+}
 
 .wrapper-9 {
   width: 100%;
@@ -681,6 +995,11 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-9 {
+    flex-direction: column;
+  }
+}
 .wrapper-9 .wrapper-9-content {
   width: 35%;
   display: flex;
@@ -688,12 +1007,34 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-9 .wrapper-9-content {
+    width: 80%;
+    align-items: center;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-9 .wrapper-9-content {
+    width: 90%;
+  }
+}
 .wrapper-9 .wrapper-9-content .wrapper-9-title {
   font-size: 2.4vmax;
   font-weight: 500;
   color: #fff;
   position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 1000px) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-title {
+    font-size: 2.5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-title {
+    font-size: 3.5vmax;
+    text-align: center;
+  }
 }
 .wrapper-9 .wrapper-9-content .wrapper-9-title::before {
   content: "";
@@ -705,12 +1046,33 @@
   left: -1vmax;
   z-index: -1;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-title::before {
+    display: none;
+  }
+}
 .wrapper-9 .wrapper-9-content .wrapper-9-description {
   margin-top: 2vmax;
   font-size: 0.9vmax;
   font-weight: 300;
   width: 75%;
   color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-description {
+    font-size: 1vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-description {
+    font-size: 1.8vmax;
+    text-align: center;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-9 .wrapper-9-content .wrapper-9-description {
+    width: 90%;
+  }
 }
 .wrapper-9 .wrapper-9-button {
   padding: 1vmax 3vmax;
@@ -723,6 +1085,17 @@
   cursor: pointer;
   transition: 250ms ease-in-out;
   font-weight: 300;
+}
+@media screen and (min-width: 1000px) {
+  .wrapper-9 .wrapper-9-button {
+    font-size: 1.1vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .wrapper-9 .wrapper-9-button {
+    font-size: 1.8vmax;
+    margin-top: 3vmax;
+  }
 }
 .wrapper-9 .wrapper-9-button:hover {
   background-color: #fff;

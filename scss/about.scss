@@ -27,6 +27,9 @@ $white: #fff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media screen and (orientation: portrait) and (max-width: 450px) {
+    height: 90vh;
+  }
   header {
     width: 100%;
     padding: 1vmax 0;
@@ -42,6 +45,9 @@ $white: #fff;
       font-size: 2.8vmax;
       font-weight: 300;
       color: $black;
+      @media screen and (orientation: portrait) {
+        font-size: 4vmax;
+      }
       span {
         color: $main-color;
       }
@@ -95,12 +101,26 @@ $white: #fff;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+      padding: 0 8%;
+      margin: auto;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      padding: 0 3% 8vmax 3%;
+    }
     .wrapper-1-title {
       font-size: 3vmax;
       color: $black;
       font-weight: 500;
       @media screen and (min-width: 1000px) {
         font-size: 3.2vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 6vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        font-size: 5vmax;
       }
       span {
         color: $main-color;
@@ -115,6 +135,9 @@ $white: #fff;
       @media screen and (min-width: 1000px) {
         font-size: 1.2vmax;
       }
+      @media screen and (orientation: portrait) {
+        font-size: 2vmax;
+      }
     }
   }
 }
@@ -126,6 +149,10 @@ $white: #fff;
   align-items: center;
   padding: 10vmax 5%;
   position: relative;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+    padding: 0;
+  }
   .wrapper-2-counter {
     width: 60%;
     background-color: $main-color;
@@ -135,6 +162,18 @@ $white: #fff;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 3px 1fr 3px 1fr 3px 1fr;
+    @media screen and (orientation: portrait) {
+      position: unset;
+      width: 80%;
+      grid-template-columns: 1fr 1fr;
+      margin-top: -8vmax;
+      row-gap: 3vmax;
+      padding: 2vmax;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 100%;
+      border-radius: 0;
+    }
     .wrapper-2-counter-item {
       display: flex;
       flex-direction: column;
@@ -147,6 +186,9 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1.5vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 2.4vmax;
+        }
       }
       .wrapper-2-counter-text {
         font-size: 0.8vmax;
@@ -155,6 +197,9 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 0.9vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.6vmax;
+        }
       }
     }
     .wrapper-2-counter-spacer {
@@ -162,10 +207,20 @@ $white: #fff;
       height: 60%;
       margin: auto;
       background-color: $white;
+      @media screen and (orientation: portrait) {
+        display: none;
+      }
     }
   }
   .wrapper-2-content {
     width: 35%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      margin-top: 6vmax;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-2-title {
       font-size: 2.4vmax;
       font-weight: 500;
@@ -174,6 +229,9 @@ $white: #fff;
       position: relative;
       @media screen and (min-width: 1000px) {
         font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
       }
       &::before {
         content: '';
@@ -194,6 +252,9 @@ $white: #fff;
       @media screen and (min-width: 1000px) {
         font-size: 1.2vmax;
       }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+      }
     }
   }
   .wrapper-2-img {
@@ -204,10 +265,13 @@ $white: #fff;
     background-size: cover;
     position: relative;
     @media screen and (orientation: portrait) {
-      width: 100%;
+      width: 80%;
       height: 30vmax;
       margin-top: 6vmax;
       margin-bottom: 0;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
     }
 
     &::before {
@@ -220,10 +284,7 @@ $white: #fff;
       height: 1vmax;
       background-color: $main-color;
       @media screen and (orientation: portrait) {
-        width: 100%;
-        bottom: 0;
-        height: 4px;
-        left: 0;
+        display: none;
       }
     }
     &::after {
@@ -236,10 +297,7 @@ $white: #fff;
       height: 75%;
       background-color: $main-color;
       @media screen and (orientation: portrait) {
-        width: 100%;
-        left: 0;
-        top: 0;
-        height: 4px;
+        display: none;
       }
     }
   }
@@ -250,11 +308,22 @@ $white: #fff;
   align-items: center;
   justify-content: space-around;
   padding: 3vmax 5%;
+  @media screen and (orientation: portrait) {
+    flex-direction: column-reverse;
+    padding: 6vmax 0;
+  }
   .wrapper-3-container {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (orientation: portrait) {
+      width: 65%;
+      margin-top: 6vmax;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 80%;
+    }
     .wrapper-3-container-box {
       width: 45%;
       display: flex;
@@ -264,10 +333,17 @@ $white: #fff;
       background-color: $main-color;
       border-radius: 20px;
       padding: 2vmax;
+      @media screen and (orientation: portrait) {
+        width: 47%;
+      }
       .wrapper-3-box-icon {
         width: 5vmax;
         height: 5vmax;
         @include center-img;
+        @media screen and (orientation: portrait) {
+          width: 6vmax;
+          height: 6vmax;
+        }
       }
       .icon1 {
         background-image: url(../assets/icons/wrapper-3-about-icon-1.png);
@@ -284,6 +360,9 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1.5vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
       .wrapper-3-box-description {
         font-size: 0.8vmax;
@@ -294,11 +373,20 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 0.9vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
+        }
       }
     }
   }
   .wrapper-3-content {
     width: 35%;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-3-content-title {
       font-size: 2.4vmax;
       font-weight: 500;
@@ -307,6 +395,9 @@ $white: #fff;
       position: relative;
       @media screen and (min-width: 1000px) {
         font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
       }
       &::before {
         content: '';
@@ -327,6 +418,9 @@ $white: #fff;
       @media screen and (min-width: 1000px) {
         font-size: 1.2vmax;
       }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+      }
     }
   }
 }
@@ -336,11 +430,20 @@ $white: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (orientation: portrait) {
+    padding: 0;
+  }
   .wrapper-4-content {
     width: 65%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3vmax;
+    @media screen and (orientation: portrait) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-4-item {
       width: 100%;
       padding: 2vmax;
@@ -354,6 +457,9 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.3vmax;
+        }
       }
       .wrapper-4-item-author {
         font-weight: 500;
@@ -362,24 +468,37 @@ $white: #fff;
         @media screen and (min-width: 1000px) {
           font-size: 1.3vmax;
         }
+        @media screen and (orientation: portrait) {
+          font-size: 1.8vmax;
+        }
       }
     }
   }
 }
 .wrapper-5 {
   width: 100%;
-  padding: 0 0 6vmax 0;
+  padding: 6vmax 0;
   background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
   .wrapper-5-content {
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (orientation: portrait) {
+      width: 80%;
+      align-items: center;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90%;
+    }
     .wrapper-5-title {
       font-size: 2.4vmax;
       font-weight: 500;
@@ -387,7 +506,11 @@ $white: #fff;
       position: relative;
       z-index: 1;
       @media screen and (min-width: 1000px) {
-        font-size: 2.4vmax;
+        font-size: 2.5vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 3.5vmax;
+        text-align: center;
       }
       &::before {
         content: '';
@@ -398,6 +521,9 @@ $white: #fff;
         top: 2.25vmax;
         left: -1vmax;
         z-index: -1;
+        @media screen and (orientation: portrait) {
+          display: none;
+        }
       }
     }
     .wrapper-5-description {
@@ -407,6 +533,13 @@ $white: #fff;
       width: 75%;
       @media screen and (min-width: 1000px) {
         font-size: 1vmax;
+      }
+      @media screen and (orientation: portrait) {
+        font-size: 1.8vmax;
+        text-align: center;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        width: 90%;
       }
     }
   }
@@ -423,6 +556,10 @@ $white: #fff;
     font-weight: 300;
     @media screen and (min-width: 1000px) {
       font-size: 1.1vmax;
+    }
+    @media screen and (orientation: portrait) {
+      font-size: 1.8vmax;
+      margin-top: 3vmax;
     }
     &:hover {
       background-color: $black;
