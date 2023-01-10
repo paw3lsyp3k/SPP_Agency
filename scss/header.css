@@ -1,0 +1,139 @@
+header {
+  width: 100%;
+  padding: 1vmax 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (orientation: portrait) {
+  header {
+    padding: 2vmax 0;
+    width: 84%;
+    left: 8%;
+    justify-content: space-between;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  header {
+    width: 90;
+    left: 5%;
+  }
+}
+header .nav-logo {
+  font-size: 2.8vmax;
+  font-weight: 300;
+  color: #000;
+}
+@media screen and (orientation: portrait) {
+  header .nav-logo {
+    font-size: 4vmax;
+  }
+}
+header .nav-logo span {
+  color: #178748;
+}
+header .nav {
+  width: 32%;
+  height: 3vmax;
+  display: flex;
+  align-items: center;
+}
+@media screen and (orientation: portrait) {
+  header .nav {
+    justify-content: space-between;
+    width: unset;
+  }
+}
+header .nav .nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+@media screen and (orientation: portrait) {
+  header .nav .nav-list {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding: 30vh 0;
+    left: -9.5%;
+    top: 0;
+    background-color: #fff;
+    flex-direction: column;
+    z-index: 10;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  header .nav .nav-list {
+    left: -6%;
+  }
+}
+header .nav .nav-list .nav-item {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2vmax;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+@media screen and (orientation: portrait) {
+  header .nav .nav-list .nav-item {
+    font-size: 2vmax;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  header .nav .nav-list .nav-item {
+    font-size: 2.5vmax;
+  }
+}
+header .nav .nav-list .nav-item span {
+  color: #178748;
+}
+header .nav .nav-list .nav-item::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #178748;
+  position: absolute;
+  bottom: 0;
+  transition: 250ms ease-in-out;
+}
+header .nav .nav-list .nav-item:hover::before {
+  width: 100%;
+  transition: 250ms ease-in-out;
+}
+header .nav .active {
+  display: flex;
+}
+header .nav .nav-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  width: 5vmax;
+  height: 0.5vmax;
+  margin: 0.5vmax 0;
+  background-color: #000;
+  transition: 250ms ease-in-out;
+}
+@media screen and (orientation: portrait) {
+  header .nav .nav-hamburger {
+    display: flex;
+    z-index: 9999;
+  }
+}
+header .active .item1 {
+  display: none;
+}
+header .active .item2 {
+  transform: rotate(45deg);
+}
+header .active .item3 {
+  transform: rotate(-45deg);
+  margin-top: -1vmax;
+}/*# sourceMappingURL=header.css.map */

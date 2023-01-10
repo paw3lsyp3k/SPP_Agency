@@ -20,7 +20,7 @@ $white: #fff;
 }
 
 .wrapper-1 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url(../assets/img/wrapper-1-bg.png);
   @include center-img;
@@ -41,6 +41,13 @@ $white: #fff;
     left: 0;
     @media screen and (orientation: portrait) {
       padding: 2vmax 0;
+      width: 84%;
+      left: 8%;
+      justify-content: space-between;
+    }
+    @media screen and (orientation: portrait) and (max-width: 450px) {
+      width: 90;
+      left: 5%;
     }
     .nav-logo {
       font-size: 2.8vmax;
@@ -58,12 +65,31 @@ $white: #fff;
       height: 3vmax;
       display: flex;
       align-items: center;
+      @media screen and (orientation: portrait) {
+        justify-content: space-between;
+        width: unset;
+      }
       .nav-list {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         list-style: none;
+        @media screen and (orientation: portrait) {
+          display: none;
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          padding: 30vh 0;
+          left: -9.5%;
+          top: 0;
+          background-color: $white;
+          flex-direction: column;
+          z-index: 10;
+        }
+        @media screen and (orientation: portrait) and (max-width: 450px) {
+          left: -6%;
+        }
         .nav-item {
           text-transform: uppercase;
           font-weight: 400;
@@ -71,6 +97,12 @@ $white: #fff;
           color: $black;
           cursor: pointer;
           position: relative;
+          @media screen and (orientation: portrait) {
+            font-size: 2vmax;
+          }
+          @media screen and (orientation: portrait) and (max-width: 450px) {
+            font-size: 2.5vmax;
+          }
           span {
             color: $main-color;
           }
@@ -91,6 +123,36 @@ $white: #fff;
           }
         }
       }
+      .active {
+        display: flex;
+      }
+      .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        @media screen and (orientation: portrait) {
+          display: flex;
+          z-index: 9999;
+        }
+        .hamburger-item {
+          width: 5vmax;
+          height: 0.5vmax;
+          margin: 0.5vmax 0;
+          background-color: $black;
+          transition: 250ms ease-in-out;
+        }
+      }
+      .active .item1 {
+        display: none;
+      }
+      .active .item2 {
+        transform: rotate(45deg);
+      }
+      .active .item3 {
+        transform: rotate(-45deg);
+        margin-top: -1vmax;
+      }
     }
   }
   .wrapper-1-content {
@@ -102,7 +164,7 @@ $white: #fff;
       margin: auto;
     }
     @media screen and (orientation: portrait) and (max-width: 450px) {
-      width: 95%;
+      width: 90%;
     }
     .wrapper-1-title {
       font-weight: 500;

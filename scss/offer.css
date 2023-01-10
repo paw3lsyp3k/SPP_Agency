@@ -32,7 +32,22 @@
   top: 0;
   left: 0;
   border-bottom: 3px solid #178748;
-  z-index: 9999;
+  z-index: 10;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 header {
+    padding: 2vmax;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+    border: none;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 header {
+    width: 100%;
+    left: 0;
+  }
 }
 .wrapper-1 header .nav-logo {
   font-size: 2.8vmax;
@@ -53,12 +68,37 @@
   display: flex;
   align-items: center;
 }
+@media screen and (orientation: portrait) {
+  .wrapper-1 header .nav {
+    justify-content: space-between;
+    width: unset;
+  }
+}
 .wrapper-1 header .nav .nav-list {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 header .nav .nav-list {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding: 30vh 0;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    flex-direction: column;
+    z-index: 10;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 header .nav .nav-list {
+    left: 0;
+  }
 }
 .wrapper-1 header .nav .nav-list .nav-item {
   text-transform: uppercase;
@@ -67,6 +107,16 @@
   color: #000;
   cursor: pointer;
   position: relative;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 header .nav .nav-list .nav-item {
+    font-size: 2vmax;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 header .nav .nav-list .nav-item {
+    font-size: 2.5vmax;
+  }
 }
 .wrapper-1 header .nav .nav-list .nav-item span {
   color: #178748;
@@ -83,6 +133,38 @@
 .wrapper-1 header .nav .nav-list .nav-item:hover::before {
   width: 100%;
   transition: 250ms ease-in-out;
+}
+.wrapper-1 header .nav .active {
+  display: flex;
+}
+.wrapper-1 header .nav .nav-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+@media screen and (orientation: portrait) {
+  .wrapper-1 header .nav .nav-hamburger {
+    display: flex;
+    z-index: 9999;
+  }
+}
+.wrapper-1 header .nav .nav-hamburger .hamburger-item {
+  width: 5vmax;
+  height: 0.5vmax;
+  margin: 0.5vmax 0;
+  background-color: #000;
+  transition: 250ms ease-in-out;
+}
+.wrapper-1 header .nav .active .item1 {
+  display: none;
+}
+.wrapper-1 header .nav .active .item2 {
+  transform: rotate(45deg);
+}
+.wrapper-1 header .nav .active .item3 {
+  transform: rotate(-45deg);
+  margin-top: -1vmax;
 }
 .wrapper-1 .wrapper-1-content {
   width: 45%;
