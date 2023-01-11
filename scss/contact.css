@@ -167,7 +167,7 @@
   height: 0.5vmax;
   margin: 0.5vmax 0;
   background-color: #000;
-  transition: 250ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 .wrapper-1 header .nav .active .item1 {
   display: none;

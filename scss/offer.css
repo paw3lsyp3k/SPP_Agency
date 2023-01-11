@@ -154,7 +154,7 @@
   height: 0.5vmax;
   margin: 0.5vmax 0;
   background-color: #000;
-  transition: 250ms ease-in-out;
+  transition: 150ms ease-in-out;
 }
 .wrapper-1 header .nav .active .item1 {
   display: none;
@@ -186,7 +186,7 @@
 }
 @media screen and (orientation: portrait) and (max-width: 450px) {
   .wrapper-1 .wrapper-1-content {
-    padding: 0 3% 8vmax 3%;
+    padding: 0 3% 15vmax 3%;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-title {
@@ -250,6 +250,11 @@
     bottom: 10vmax;
     width: 8vmax;
     height: 8vmax;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 450px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-content-arrow {
+    bottom: 14vmax;
   }
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-arrow:hover {

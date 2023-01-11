@@ -20,7 +20,7 @@ $white: #fff;
 }
 
 .wrapper-1 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-image: url(../assets/img/wrapper-1-bg.png);
   @include center-img;
@@ -140,7 +140,7 @@ $white: #fff;
           height: 0.5vmax;
           margin: 0.5vmax 0;
           background-color: $black;
-          transition: 250ms ease-in-out;
+          transition: 150ms ease-in-out;
         }
       }
       .active .item1 {

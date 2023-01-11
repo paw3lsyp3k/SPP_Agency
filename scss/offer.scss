@@ -142,7 +142,7 @@ $white: #fff;
           height: 0.5vmax;
           margin: 0.5vmax 0;
           background-color: $black;
-          transition: 250ms ease-in-out;
+          transition: 150ms ease-in-out;
         }
       }
       .active .item1 {
@@ -173,7 +173,7 @@ $white: #fff;
       margin: auto;
     }
     @media screen and (orientation: portrait) and (max-width: 450px) {
-      padding: 0 3% 8vmax 3%;
+      padding: 0 3% 15vmax 3%;
     }
     .wrapper-1-title {
       font-size: 3vmax;
@@ -222,6 +222,9 @@ $white: #fff;
         bottom: 10vmax;
         width: 8vmax;
         height: 8vmax;
+      }
+      @media screen and (orientation: portrait) and (max-width: 450px) {
+        bottom: 14vmax;
       }
       &:hover {
         transition: 300ms ease-in-out;
